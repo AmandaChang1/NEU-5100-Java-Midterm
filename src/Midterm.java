@@ -2,7 +2,7 @@ import java.util.*;
 public class Midterm {
 	
 	//1
-	public static <E> void reverse(ArrayList<E> list){
+	public static <E> void reverse(ArrayList<E> list){             //correct
 		for (int j=0; j<list.size()/2; j++){
 			E c = list.get(j);
 			list.set(j, list.get(list.size()-j-1));
@@ -14,7 +14,7 @@ public class Midterm {
 	
 	
 	//2
-	public static String generateStrings (String s1, String s2){
+	public static String generateStrings (String s1, String s2){    //correct
 		StringBuilder b = new StringBuilder();
 		Set<Character> one = new HashSet<>();
 		for (int i=0; i<s1.length();i++){
@@ -43,7 +43,7 @@ public class Midterm {
 	}
 	
 	//3
-	public static int singleNumber(int[] nums){
+	public static int singleNumber(int[] nums){        //correct
 		Set<Integer> arr = new HashSet<Integer>(); 
 		for (int i : nums){
 			if (!arr.remove(i)){
@@ -57,7 +57,7 @@ public class Midterm {
 	}
 	
 	//4
-	public int[] twoSum(int[] nums, int target){
+	public int[] twoSum(int[] nums, int target){        //wrong(-3):if nums is {3,2,4}, target is 6, you print (3,3){2,4), but one number could only use once.
 		HashMap <Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int i=0; i<nums.length; i++)
 			map.put(nums[i], target-nums[i]);
@@ -74,7 +74,7 @@ public class Midterm {
 	
 	
 	//5
-	public List<Integer> getRom(int rowIndex){
+	public List<Integer> getRom(int rowIndex){                    //wrong        
 		if (rowIndex == 1){
 	          List <Integer> list = new ArrayList(rowIndex+1);
 	          list.add(1);
